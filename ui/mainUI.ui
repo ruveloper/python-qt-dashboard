@@ -889,7 +889,7 @@ QPushButton:pressed {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QFrame#frameContenido {	
+          <string notr="true">QFrame#frameContent {	
 	
 	background-color: rgb(255, 255, 255);
 }</string>
@@ -1627,7 +1627,6 @@ QPushButton:pressed {
   </widget>
  </widget>
  <resources>
-  <include location="src.qrc"/>
   <include location="src.qrc"/>
  </resources>
  <connections/>

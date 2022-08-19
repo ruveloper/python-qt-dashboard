@@ -2,17 +2,19 @@ import sys
 import os
 from PySide2.QtWidgets import QApplication
 
+from lib.static import UI_FOLDER, UI_COMPILED_FOLDER
+
+from lib.utils.ui_utils import compile_ui, compile_qrc
 from lib.views.login_view import LoginView
 from lib.views.main_view import MainView
 
 # * APPLICATION - ENTRY POINT
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    # * ----------- UI FILES -------------
+    # * -------- COMPILE UI FILES --------
     # Compile QT.ui files to Python.py | Update changes on .ui files
-    os.system("pyside2-uic ./ui/loginUI.ui -o ./ui/compiled/loginUI.py --from-imports ./ui/compiled")
-    os.system("pyside2-uic ./ui/mainUI.ui -o ./ui/compiled/mainUI.py --from-imports ./ui/compiled")
-    os.system("pyside2-rcc ./ui/src.qrc -o ./ui/compiled/src_rc.py")
+    compile_ui(UI_FOLDER, UI_COMPILED_FOLDER)
+    compile_qrc(UI_FOLDER, UI_COMPILED_FOLDER)
 
     # * --------- QT APPLICATION ---------
     # Main application

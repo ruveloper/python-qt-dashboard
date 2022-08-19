@@ -13,7 +13,6 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from  . import src_rc
-from  . import src_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -445,7 +444,7 @@ class Ui_MainWindow(object):
         self.frameContent = QFrame(self.frameMain)
         self.frameContent.setObjectName(u"frameContent")
         self.frameContent.setMinimumSize(QSize(0, 0))
-        self.frameContent.setStyleSheet(u"QFrame#frameContenido {	\n"
+        self.frameContent.setStyleSheet(u"QFrame#frameContent {	\n"
 "	\n"
 "	background-color: rgb(255, 255, 255);\n"
 "}")
